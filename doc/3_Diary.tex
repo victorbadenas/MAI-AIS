@@ -1,0 +1,96 @@
+In this chapter we will document the time and task management strategies used during the development and the research for this project. The work done for the subject has been divided in the following subtasks:
+
+\begin{enumerate}
+    \item Previous Knowkledge (\autoref{previous-knowledge})
+            \begin{enumerate}
+                \item Additive Feature Attribution Method
+                \item Shapley Values
+            \end{enumerate}
+    \item SHAP (\autoref{SHAP-Subtask})
+            \begin{enumerate}
+                \item Definition
+                \item How to interpret the plots 
+                \item Model Agnostic Approximation: Kernel SHAP
+                \item Model dependant Approximation: 
+                    \begin{enumerate}
+                        \item Linear SHAP
+                        \item Tree SHAP
+                        \item Deep SHAP
+                    \end{enumerate}
+                \item Jupyter Notebooks \cite{ExampleNotebooks}:
+                    \begin{enumerate}
+                        \item Kernel SHAP
+                        \item Linear SHAP
+                        \item Tree SHAP
+                        \item Deep SHAP
+                        \item Other datasets and alternative explanations
+                    \end{enumerate}
+            \end{enumerate}
+\end{enumerate}
+
+In the following tables we document the time assignations done for each of the tasks. As a rough estimation, we started to develop the project on May $29^{th}$ and we segmented the work as represented in \autoref{week-planning}. The times devoted to each task are documented in \autoref{previous-knowledge} and \autoref{SHAP-Subtask} where NA means not applicable and 1d of work refers to a working day (8h).
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Week          & Global Task                            \\ \hline
+\hline 
+29/03 - 4/04  & Background Research                    \\ \hline
+5/04 - 18/04  & Main document writing and explanations \\ \hline
+18/04 - 25/04 & Jupyter Notebooks and sample code      \\ \hline
+26/04 - 2/05  & Presentation                           \\ \hline
+\end{tabular}
+\caption{Week-wise planning and task asignation}
+\label{week-planning}
+\end{table}
+
+\begin{table}[ht!]
+\centering
+\resizebox{\textwidth}{!}{
+    \begin{tabular}{|l|l|l|l|l|}
+        \hline
+        \textbf{Previous Knowledge Subtask}                                & Asignee        & Documentation Time & Explanation Time & Presentation Time \\ \hline\hline
+        Additive Feature Attribution Method & Andrea Masi    & 1d                 & 2h               & 2h                \\ \hline
+        Shapley Values                      & Victor Badenas & 3d                 & 2d               & 1d                \\ \hline
+    \end{tabular}}
+    \caption{Diary: Previous Knowkledge}
+    \label{previous-knowledge}
+\end{table}
+
+\begin{table}[H]
+    \resizebox{\textwidth}{!}{
+        \begin{tabular}{|l|l|l|l|l|}
+            \hline
+            \textbf{SHAP Subtask}                                          & Asignee        & Documentation Time & Explanation Time & Presentation Time \\ \hline\hline
+            Definition                                            & Victor Badenas & 2d                 & 3h               & 2h                \\ \hline
+            How to interpret the plots Notebook                   & Victor Badenas & 1h                 & 3h               & 1h                \\ \hline
+            Model Agnostic Approximation:  Kernel SHAP            & Victor Badenas & 2d                 & 1d               & 2h                \\ \hline
+            Kernel SHAP Notebook                                  & Victor Badenas & NA                 & 4h               & NA                \\ \hline
+            Model dependant Approximation: Linear SHAP            & Andrea Masi    & 1d                 & 1h               & 1h                \\ \hline
+            Linear SHAP Notebook                                  & Victor Badenas & NA                 & 2h               & NA                \\ \hline
+            Model dependant Approximation: Tree SHAP              & Andrea Masi    & 4d                 & 5h               & 1h                \\ \hline
+            Tree SHAP Notebook                                    & Andrea Masi    & NA                 & 3h               & NA                \\ \hline
+            Tree SHAP example Notebook                            & Andrea Masi    & NA                 & 3h               & NA                \\ \hline
+            Model dependant Approximation: Deep SHAP              & Andrea Masi    & 4d                 & 5h               & 1h                \\ \hline
+            Deep SHAP Notebook                                    & Andrea Masi    & NA                 & 1d               & NA                \\ \hline
+            New Datasets and Alternative Experiments: Kernel SHAP & Victor Badenas & NA                 & 2h               & NA                \\ \hline
+            New Datasets and Alternative Experiments: Linear SHAP & Victor Badenas & NA                 & 3h               & NA                \\ \hline
+            New Datasets and Alternative Experiments: Tree SHAP   & Andrea Masi    & NA                 & 1h               & NA                \\ \hline
+            New Datasets and Alternative Experiments: Deep SHAP   & Andrea Masi    & NA                 & 3h               & NA               \\ \hline
+        \end{tabular}}
+    \caption{Diary: SHAP}
+    \label{SHAP-Subtask}
+\end{table}
+
+\section{Conclusions}
+
+The SHAP Explainers and alternatives are very useful in order to properly explain the reasoning behind a prediction of a model. It is quite computationally expensive to compute, however it delivers very accurate and visual results for the user to interpret. We find the visual tools in the SHAP python package in particular very useful to include non numerical explanations in papers and articles, making them easier on the eyes as well as provide some meaningful insight on the model. This will disambiguate some of the aspects of a ML model making it more understandable and clear.
+
+Additionally, explainers like the \texttt{DeepExplainer} on the SHAP python package can be very useful for detecting why a classification model, for instance, is performing the classifications in a certain way. The visual tool in the python package also gives very interesting information, where each of the classes can be seen to detect a pattern that can be easily identified in the plots.
+
+Other kids of explainers can be really useful as well to debug the correct functionality of models that have not been tested exhaustively in a certain domain, allowing the researcher to make sure that the models are good, not only in the domain that they are being tested on, but in a more general scenario.
+
+We also would like to mention that one particular and very interesting explainer has not been exploited due to lack of time, \texttt{KernelExplainer} (This allows an entire dataset to be used as the background distribution, instead of just a reduced number of samples).
+
+Finally we would like to state that mostly for sure in our future works we will make use of SHAP for performing explanations and make our models more interpretable and make our findings more concise.
