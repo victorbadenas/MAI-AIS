@@ -5,7 +5,7 @@ Repository for SHAP lecture for AIS @ MAI-FIB Subject
 **Authors:**  
 Andrea Masi & Victor Badenas
 
-## Contents of the repository
+## Contents
 
 - `SHAP-Report.pdf` contains the explanation and introductory explanations done for the subject as well as the time estimation devoted to the tasks and the conclusions done
 - `SHAP-Slides.pdf` contains the slides in pdf format used for the class.
